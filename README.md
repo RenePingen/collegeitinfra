@@ -31,7 +31,7 @@ Check if the container is running:
 Expected result:
 ```
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
-ea5a87732acf        nginx               "nginx -g 'daemon of…"   5 seconds ago       Up 3 seconds        0.0.0.0:80->80/tcp   ws2
+ea5a87732acf        nginx               "nginx -g 'daemon of…"   5 seconds ago       Up 3 seconds        0.0.0.0:80->80/tcp   webserver1
 ```
 
 Check if you can access the application through the browser. In play-with-docker, you can do this by clicking on the port number on the top of the screen (port 80 in this case).
