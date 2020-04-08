@@ -13,42 +13,67 @@ The instructions below are based on play-with-docker. Also watch the video in th
 
 ### 1. Launch the docker helloworld application
 
-Vanuit de docker console (het scherm waar je docker kunt aansturen), kun je docker commando's uitvoeren. Voer het volgende commando uit:
-"docker run hello-world"
-Dit zal als het goed is het resultaat geven:
-"
+Use the docker console/terminal (the screen in which you can control docker) to execute the following docker command:
+```docker run hello-world```
+
+Expected result:
+```
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
-"
-	2. Start een simpele webserver in docker
-In dit lab gaan we een simpele webserver starten die via de browser te bereiken is. 
-Voer het volgende commando uit:
-docker run -d -p 80:80 nginx
+```
+### 2. Start a webserver in a docker container
+In this excercise you will start a webserver in a docker container that can be accessed through a browser. 
+Run the following docker command:
+```docker run -d -p 80:80 --name webserver1 nginx```
 
-	3. Start een eigen webapplicatie in docker
-Start nu een eigen webapplicatie. Hiervoor is het verstandig om een nieuwe instance aan te maken in playwithdocker door op de knop "add new instance" te drukken.
-Voer het volgende commando uit om een webapplicatie op te halen:
-git clone https://github.com/RenePingen/collegeitinfra.git
+Check if the container is running:
+```docker ps```
+Expected result:
+```
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+ea5a87732acf        nginx               "nginx -g 'daemon of…"   5 seconds ago       Up 3 seconds        0.0.0.0:80->80/tcp   ws2
+```
 
-Optioneel: pas de website aan
-Gebruik de editor om het bestand index.html in de map collegeitinfra/Webserverdemo aan de passen. In de docker webomgeving (play-with-docker), klik op editor, navigeer naar het bestand index.html en open het bestand. Pas de tekst aan en sla op
+Check if you can access the application through the browser. In play-with-docker, you can do this by clicking on the port number on the top of the screen (port 80 in this case).
 
-Bouw de image
-Bouw de image van de webapplicatie als docker container met het volgende commando:
-docker build -t webserverdemo collegeitinfra/Webserverdemo/
+Kill the container
+``` docker kill webserver1```
 
-Start een docker container met de webapplicatie
-Voer het volgende commando uit:
-docker run -d -p 80:80 webserverdemo
-Test de image
-In play with docker, klik op het poortnummer 80 of klik "open port" en vul dan 80 in.
+### 3. Start your own web application in docker
+In this excercise you will start a custom web application.
 
-	3. Lanceer een virtuele desktop met een webinterface
+Download the code for the web application by cloning the git repository. Execute the following command in the console/terminal:
+```git clone https://github.com/RenePingen/collegeitinfra.git ```
 
-Optioneel: Maak een eigen docker image en lanceer deze
+#### Optional: make a change in the webpage
+Use the editor to change the file index.html in the folder collegeitinfra/Webserverdemo. In the docker web environment (play-with-docker), click on "Editor", navigate to the right folder and file index.html, and edit and save the changes.
+
+#### Build the docker image
+Build the docker image by running the following command. This will tell docker to take the docker file, index.html and create a docker image out of it that we can launch.
+```docker build -t webserverdemo collegeitinfra/Webserverdemo/```
+
+#### Launch the custom docker container
+Launch the custom docker container by running the following command:
+```docker run -d -p 81:80 webserverdemo```
+
+### Test the container
+Check if you can access the application through the browser. In play-with-docker, you can do this by clicking on the port number on the top of the screen (port 81 in this case).
+
+#### Launch a second container
+To show the power of docker, now launch a second container with the same image. We need to use a different port on the host machine, so:
+```docker run -d -p 82:80 webserverdemo```
+
+Check if you can access the application through the browser. In play-with-docker, you can do this by clicking on the port number on the top of the screen (port 82 in this case).
+
+####Optional 4. Launch a virtual desktop with a web interface
+To show the power of virtualisation we will run a virtual desktop in a docker container. For this we will use a docker image which has a full version of Linux with user interface and remote access possibilities (through VNC).
+
+Run the following command in docker:
+``` docker run -d -p 5901:5901 -p 6901:6901 consol/centos-xfce-vnc ```
+
+Check if you can access the application through the browser. In play-with-docker, you can do this by clicking on the port number on the top of the screen (port 6901 in this case). Use the password "vncpassword" to access the desktop.
 
 
-docker run -d -p 5901:5901 -p 6901:6901 consol/centos-xfce-vnc
 
 
 
