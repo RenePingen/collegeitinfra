@@ -2,8 +2,7 @@
 This repository contains lab examples for IT infrastructure lectures on virtualization and cloud. The content will be handled in more detail in the lectures. This manual consist of two parts: reading material and hands-on lab. The reading material and labs help in understanding the concepts of virtualization and container technology.
 
 ## Reading material
-Read through the following pages to get an understanding of virtualisation and container technology:
-https://www.freecodecamp.org/news/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b/
+Read through the following page to get an understanding of virtualisation and container technology:
 https://www.freecodecamp.org/news/docker-simplified-96639a35ff36/ ( this second link already contains some practical examples)
 
 ## Lab excercises
@@ -76,7 +75,9 @@ Run the following command in docker:
 Check if you can access the application through the browser. In play-with-docker, you can do this by clicking on the port number on the top of the screen (port 6901 in this case). Use the password "vncpassword" to access the desktop.
 
 
-
+# More reading
+https://www.freecodecamp.org/news/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b/
+https://www.youtube.com/watch?v=YFl2mCHdv24
 
 
 
