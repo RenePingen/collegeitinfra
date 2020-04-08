@@ -10,6 +10,8 @@ https://www.freecodecamp.org/news/docker-simplified-96639a35ff36/ ( this second 
 Based on the instructions in the second link you can choose to use play-with-docker (https://labs.play-with-docker.com/) or install docker on your own computer.
 
 The instructions below are based on play-with-docker. Also watch the video in this repository for an explanation.
+Video link:
+https://github.com/RenePingen/collegeitinfra/blob/master/Docker%20lab%20infrastructuur%20college.mp4
 
 ### 1. Launch the docker helloworld application
 
