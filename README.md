@@ -10,7 +10,7 @@ Based on the instructions in the second link you can choose to use play-with-doc
 
 The instructions below are based on play-with-docker. Also watch the video in this repository for an explanation.
 Video link:
-https://github.com/RenePingen/collegeitinfra/blob/master/Docker%20lab%20infrastructuur%20college.mp4
+https://github.com/RenePingen/collegeitinfra/raw/master/Docker%20lab%20infrastructuur%20college.mp4
 
 ### 1. Launch the docker helloworld application
 
