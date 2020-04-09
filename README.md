@@ -66,7 +66,7 @@ To show the power of docker, now launch a second container with the same image. 
 
 Check if you can access the application through the browser. In play-with-docker, you can do this by clicking on the port number on the top of the screen (port 82 in this case).
 
-####Optional 4. Launch a virtual desktop with a web interface
+#### Optional 4. Launch a virtual desktop with a web interface
 To show the power of virtualisation we will run a virtual desktop in a docker container. For this we will use a docker image which has a full version of Linux with user interface and remote access possibilities (through VNC).
 
 Run the following command in docker:
