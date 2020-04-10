@@ -2,8 +2,10 @@
 This repository contains lab examples for IT infrastructure lectures on virtualization and cloud. The content will be handled in more detail in the lectures. This manual consist of two parts: reading material and hands-on lab. The reading material and labs help in understanding the concepts of virtualization and container technology.
 
 ## Reading material
-Read through the following page to get an understanding of virtualisation and container technology:
+Read through the following page to get a basic understanding of virtualisation and container technology:
 https://www.freecodecamp.org/news/docker-simplified-96639a35ff36/ ( this second link already contains some practical examples)
+
+Note: this will be explained in the coming lectures in more detail, so do not worry if you do not yet fully grasp the concepts.
 
 ## Lab excercises
 Based on the instructions in the second link you can choose to use play-with-docker (https://labs.play-with-docker.com/) or install docker on your own computer.
