@@ -83,6 +83,7 @@ Run the following command in docker:
 
 Check if you can access the application through the browser. In play-with-docker, you can do this by clicking on the port number on the top of the screen (port 6901 in this case). Use the password "vncpassword" to access the desktop.
 
+Note: This virtual desktop can crash when running on playwithdocker. This is because the image requires more resources than that are available in the free account.
 
 # More reading
 https://www.freecodecamp.org/news/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b/
