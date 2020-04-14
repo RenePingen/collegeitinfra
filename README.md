@@ -7,12 +7,19 @@ https://www.freecodecamp.org/news/docker-simplified-96639a35ff36/ ( this second 
 
 Note: this will be explained in the coming lectures in more detail, so do not worry if you do not yet fully grasp the concepts.
 
-## Lab excercises
-Based on the instructions in the second link you can choose to use play-with-docker (https://labs.play-with-docker.com/) or install docker on your own computer.
-
 The instructions below are based on play-with-docker. Also watch the video in this repository for an explanation.
 Video link:
 https://github.com/RenePingen/collegeitinfra/raw/master/Docker%20lab%20infrastructuur%20college.mp4
+
+## Lab excercises
+Based on the instructions in the second link you can choose to use play-with-docker (https://labs.play-with-docker.com/) or install docker on your own computer.
+
+###Login with playwithdocker
+If you want to use playwithdocker you have to create an account first.
+1. Go to https://labs.play-with-docker.com/
+2. Click login, then click docker.
+3. Click sign up to create a docker account. Create an account with a username (docker id), email and password.
+4. Go back to https://labs.play-with-docker.com/
 
 ### 1. Launch the docker helloworld application
 
