@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 As part of the cloud lectures we have selected a couple of hands-on tutorials/labs to create cloud services. For this lab we will use the Amazon Web Services (AWS) cloud platform.
 
 ## Setting up an account for AWS
