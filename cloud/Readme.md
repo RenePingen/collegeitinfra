@@ -10,11 +10,13 @@ https://aws.amazon.com/education/awseducate/
 ## 1. Create a virtual machine in the cloud
 Watch the introduction video of Amazon Elastic Cloud Compute (EC2):
 https://www.youtube.com/watch?v=TsRBftzZsQo
+
 Follow the hands-on tutorial here:
 https://aws.amazon.com/getting-started/hands-on/launch-windows-vm/
 
 ## 2. Upload and download files in the cloud
 Watch the introduction video of Amazon Simple Storage Service (S3):
 https://www.youtube.com/watch?v=77lMCiiMilo
+
 Follow the hands-on tutorial here:
 https://aws.amazon.com/getting-started/hands-on/backup-files-to-amazon-s3/
