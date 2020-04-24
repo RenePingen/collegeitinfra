@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.getJSON demo</title>
+  <style>
+  img {
+    height: 100px;
+    float: left;
+  }
+table.blueTable {
+  border: 1px solid #1C6EA4;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.blueTable td, table.blueTable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+table.blueTable tbody td {
+  font-size: 13px;
+}
+table.blueTable tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.blueTable thead {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #444444;
+}
+table.blueTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #D0E4F5;
+}
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+
+table.blueTable tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #D0E4F5;
+  background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  border-top: 2px solid #444444;
+}
+table.blueTable tfoot td {
+  font-size: 14px;
+}
+table.blueTable tfoot .links {
+  text-align: right;
+}
+table.blueTable tfoot .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+ 
+<div id="data">
+<table id="datatable" class="blueTable">
+<tr><th>UserName</th><th>Count</th></tr>
+<tbody>
+</tbody>
+</table>
+<form id="userForm">
+  Enter name: <input type="text" id="userName">
+  <input type="submit">
+</form>
+</div>
+ 
+<script>
+function refreshData()
+{
+	var dataAPI = "<URLAPI2>";
+  $.getJSON( dataAPI)
+    .done(function( data ) {
+	    var table = $('#datatable');
+			console.log(data);
+			table.empty();
+			table.append("<tr><th>UserName</th><th>Count</th></tr>");
+      $.each( data, function(i,item ) {
+				console.log(item);
+        table.append('<tr><td>'+item.userName+'</td><td>'+item.count+'</td></tr>');
+      })
+			
+    });
+}
+
+function submitData(value)
+{
+	var sendAPI = "<URLAPI1>";
+  $.getJSON( sendAPI,"&name="+value)
+    .done(function( data ) {
+	  console.log(data);
+    });
+}
+
+
+(function() {
+  refreshData();
+
+	$('#userForm').on('submit', function(e) { //use on if jQuery 1.7+
+        e.preventDefault();  //prevent form from submitting
+        var data = $("#userName").val();
+        submitData(data);
+				
+    });
+})();
+</script>
+ 
+</body>
+</html>
