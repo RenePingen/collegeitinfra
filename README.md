@@ -8,7 +8,8 @@ https://www.freecodecamp.org/news/docker-simplified-96639a35ff36/ ( this second 
 Note: this will be explained in the coming lectures in more detail, so do not worry if you do not yet fully grasp the concepts.
 
 The instructions below are based on play-with-docker. Also watch the video in this repository for an explanation.
-Video link:
+https://youtu.be/D88VPPES8cY
+Or as MP4
 https://github.com/RenePingen/collegeitinfra/raw/master/Docker%20lab%20infrastructuur%20college.mp4
 
 ## Lab excercises
